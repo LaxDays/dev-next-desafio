@@ -226,6 +226,7 @@ body {
 }
 .leftFooter span {
   color: blue;
+  cursor: pointer;
 }
 .devComunityFooter {
   font-weight: 500;
@@ -302,6 +303,7 @@ body {
   font-size: 27px;
   text-decoration: underline;
   color: blue;
+  cursor: pointer;
 }
 .p5_5WelcomeCenter {
   padding: 9px 0px;

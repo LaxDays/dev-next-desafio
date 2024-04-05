@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Buttons from "../src/components/Buttons";
-import { identifyWith } from "../src/constants/identifyWith";
+import Buttons from "../../src/components/Buttons";
+import { identifyWith } from "../../src/constants/identifyWith";
 import Link from "next/link";
 
 export default function SignUp() {
@@ -32,6 +32,11 @@ export default function SignUp() {
                   />
                 );
               })}
+              <Link href="/create_account">
+                <button>
+                  <div> 🔴</div> <div>Sign up with Email</div>
+                </button>
+              </Link>
             </div>
           </div>
           <div>

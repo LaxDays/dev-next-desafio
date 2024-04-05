@@ -15,8 +15,4 @@ export const identifyWith = [
     name: "Sign up with Twitter",
     icon: "🔴",
   },
-  {
-    name: "Sign up with Email",
-    icon: "🔴",
-  },
 ];
