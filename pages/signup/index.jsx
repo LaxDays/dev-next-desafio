@@ -32,7 +32,7 @@ export default function SignUp() {
                   />
                 );
               })}
-              <Link href="/create_account">
+              <Link href="/signup/create_account">
                 <button>
                   <div> 🔴</div> <div>Sign up with Email</div>
                 </button>
