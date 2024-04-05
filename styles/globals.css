@@ -1,0 +1,453 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(247, 240, 240);
+}
+
+/*++++++++++++++++++++NAV BAR++++++++++++++++++++*/
+.myNavBar {
+  background-color: white;
+}
+.leftAndRight {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid rgb(218, 218, 218) 1px;
+  padding: 6px 8px;
+}
+.leftNavBar {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.btnThreeBars {
+  font-size: 25px;
+  padding: 0px 10px;
+}
+.btnThreeBars:hover {
+  background-color: rgba(0, 0, 255, 0.171);
+  border-radius: 5px;
+  color: blue;
+}
+.logoDEV {
+  margin-top: 2px;
+}
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  border: solid gray 1px;
+  border-radius: 5px;
+  height: 38px;
+  width: 425px;
+  margin-top: 3px;
+}
+.searchBarContainer:hover {
+  border: solid rgb(107, 107, 107) 2px;
+}
+.inputSearch {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  outline: none;
+  width: 367px;
+}
+.inputSearch:hover {
+  background-color: none;
+  padding: 0px;
+}
+.btnSearchInput {
+  border-radius: 8px;
+  margin-left: 10px;
+  font-size: 25px;
+}
+.btnSearchInput:hover {
+  font-size: 25px;
+  background-color: rgba(0, 0, 255, 0.171);
+  border-radius: 5px;
+}
+.btnSearch {
+  font-size: 25px;
+  padding: 2.5px;
+}
+.btnSearch:hover {
+  background-color: rgba(0, 0, 255, 0.171);
+  border-radius: 5px;
+  color: blue;
+}
+.rightNavBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.btnLogIn {
+  color: rgb(114, 114, 114);
+  margin-right: 20px;
+  padding: 10px 15px;
+}
+.btnLogIn:hover {
+  background-color: rgba(0, 0, 255, 0.171);
+  border-radius: 5px;
+  color: rgb(47, 47, 180);
+  text-decoration: underline;
+  padding: 10px 15px;
+}
+.btnCreateAccount {
+  border: solid blue 1px;
+  border-radius: 8px;
+  color: blue;
+  font-weight: 500;
+  padding: 8px 15px;
+}
+.btnCreateAccount:hover {
+  background-color: blue;
+  color: white;
+  text-decoration: underline;
+}
+
+/*Main Flex*/
+.mainFlexContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 15px;
+  margin-left: 5px;
+}
+
+/*++++++++++++++++++++LEFT SIDE++++++++++++++++++++*/
+.leftSideContainer {
+  border-radius: 8px;
+  width: 240px;
+  min-height: 500px;
+}
+.introductionToDev {
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+}
+.introductionComunity {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+.btnIntroductionCreateAccount {
+  margin-top: 15px;
+  width: 210px;
+  border: solid blue 1px;
+  border-radius: 8px;
+  color: blue;
+  font-weight: 500;
+  padding: 8px 15px;
+}
+.btnIntroductionCreateAccount:hover {
+  background-color: blue;
+  color: white;
+  text-decoration: underline;
+}
+.btnIntroductionLogIn {
+  margin-top: 3px;
+  width: 210px;
+  border-radius: 8px;
+  padding: 10px;
+  color: rgb(59, 59, 59);
+}
+.btnIntroductionLogIn:hover {
+  background-color: rgba(0, 0, 255, 0.171);
+  border-radius: 5px;
+  color: rgb(47, 47, 180);
+  text-decoration: underline;
+  padding: 10px 15px;
+}
+/*MainOptions*/
+.mainOptionsContainer {
+  margin: 25px 0px;
+}
+.mainOptionsContainer button {
+  display: flex;
+  gap: 10px;
+  font-size: 17px;
+  padding: 7px 0px;
+  width: 230px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+.mainOptionsContainer button:hover {
+  background-color: rgba(0, 0, 255, 0.171);
+  border-radius: 5px;
+  color: rgb(47, 47, 180);
+}
+/*LeftOther*/
+.leftOtherP {
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-left: 12px;
+}
+.otherOptionsContainer button {
+  display: flex;
+  gap: 10px;
+  font-size: 17px;
+  padding: 7px 0px;
+  width: 230px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+.otherOptionsContainer button:hover {
+  background-color: rgba(0, 0, 255, 0.171);
+  border-radius: 5px;
+  color: rgb(47, 47, 180);
+}
+/*Popular Tags*/
+.popularTagsContainer {
+  height: 400px;
+  overflow-y: scroll;
+}
+.popularTagsContainer button {
+  display: flex;
+  padding: 8px 0px;
+  width: 210px;
+  margin-left: 12px;
+}
+.popularTagsContainer button:hover {
+  background-color: rgba(0, 0, 255, 0.171);
+  border-radius: 5px;
+  color: rgb(47, 47, 180);
+}
+/*Left Footer*/
+.leftFooter {
+  color: rgb(141, 141, 141);
+  font-size: 13.7px;
+  margin: 20px 0px 20px 3px;
+}
+.leftFooter span {
+  color: blue;
+}
+.devComunityFooter {
+  font-weight: 500;
+}
+/*++++++++++++++++++++CENTER++++++++++++++++++++*/
+.centerContainer {
+  border-radius: 8px;
+  width: 650px;
+  min-height: 500px;
+  background-color: blue;
+}
+
+/*++++++++++++++++++++RIGHT++++++++++++++++++++*/
+.rightSideContainer {
+  padding-top: 0px;
+  margin-top: 0px;
+  border-radius: 8px;
+  width: 325px;
+  min-height: 500px;
+}
+/*Discuss*/
+.rigthDiscutionsContainer,
+.rigthWatercoolerContainer {
+  background-color: white;
+  padding-left: 15px;
+  padding-top: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.discussTitle {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.discussDescription {
+  font-size: 12px;
+  color: rgb(75, 74, 74);
+  margin-bottom: 10px;
+}
+.rightDiscussPosts {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.rightDiscussPosts p:hover {
+  color: blue;
+  cursor: pointer;
+}
+.rightDiscussPosts p {
+  border-top: solid rgba(128, 128, 128, 0.219) 1px;
+  margin: 10px 0px;
+  padding-top: 11px;
+}
+.rightDiscussPosts span {
+  font-size: 14.4px;
+  color: rgb(75, 74, 74);
+}
+.rightTrendingTitle {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 0px 0px 15px;
+}
+.trendingPosts,
+.queriedPosts {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.trendingPosts article,
+.queriedPosts article {
+  padding: 0px 30px 0px 35px;
+}
+.trendingPosts p,
+.queriedPosts p {
+  padding: 14px;
+  border-radius: 8px;
+}
+.trendingPosts p:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.queriedTitle {
+  margin-top: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 0px 0px 15px;
+}
+
+.queriedPosts p:hover {
+  background-color: white;
+  cursor: pointer;
+}
+/*++++++++++++++++++++SIGNUP and % of signin++++++++++++++++++++*/
+.mySignUpContainerFull {
+  display: flex;
+  justify-content: center;
+  min-width: 100vh;
+  min-height: 100vh;
+  background-color: white;
+  text-align: center;
+}
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px;
+}
+.joinDEV {
+  font-weight: bolder;
+  font-size: 30px;
+}
+.btnsSignUpContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 25px;
+}
+.btnsSignUpContainer button {
+  border: solid gray 1px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+  margin-right: 12px;
+  width: 550px;
+  display: grid;
+  grid-template-columns: 1fr 25fr;
+}
+.btnsSignUpContainer button:hover {
+  background-color: rgba(163, 163, 163, 0.164);
+}
+.termsAndConduct {
+  color: gray;
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.blueLinks {
+  color: blue;
+}
+.alreadyAccount {
+  margin-top: 20px;
+}
+
+/*SignIn*/
+.emailInputContainer input {
+  width: 550px;
+  border: solid gray 1px;
+  border-radius: 8px;
+  margin-right: 12px;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+.emailInputContainer input:focus {
+  outline: solid blue 1px;
+}
+.emailInputContainer p {
+  text-align: left;
+  margin-left: 25px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.passwordInputContainer input {
+  width: 550px;
+  border: solid gray 1px;
+  border-radius: 8px;
+  margin-right: 12px;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+.passwordInputContainer input:focus {
+  outline: solid blue 1px;
+}
+.passwordInputContainer p {
+  text-align: left;
+  margin-left: 25px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.rememberForgotContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 550px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+.forgotPassword {
+  color: blue;
+}
+.btnSubmitLogIn {
+  background-color: rgb(88, 77, 247);
+  width: 550px;
+  color: white;
+  padding: 12px;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-right: 5px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .btnSearch {
+    display: none;
+  }
+  .btnThreeBars {
+    display: none;
+  }
+}
+@media (max-width: 769px) {
+  .searchBarContainer {
+    display: none;
+  }
+  .btnLogIn {
+    display: none;
+  }
+}
+@media (min-width: 1300px) {
+  .leftAndRight {
+    display: flex;
+    justify-content: center;
+    border-bottom: solid rgb(218, 218, 218) 1px;
+    padding: 6px 8px;
+    gap: 520px;
+  }
+}
