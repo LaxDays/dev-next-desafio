@@ -1,18 +1,18 @@
 export const identifyWithSignIn = [
   {
-    name: "Sign up with Apple",
+    name: "Continue with Apple",
     icon: "🔴",
   },
   {
-    name: "Sign up with Forem",
+    name: "Continue with Forem",
     icon: "🔴",
   },
   {
-    name: "Sign up with GitHub",
+    name: "Continue with GitHub",
     icon: "🔴",
   },
   {
-    name: "Sign up with Twitter",
+    name: "Continue with Twitter",
     icon: "🔴",
   },
 ];

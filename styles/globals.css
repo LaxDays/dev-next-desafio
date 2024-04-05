@@ -230,14 +230,82 @@ body {
 .devComunityFooter {
   font-weight: 500;
 }
+
 /*++++++++++++++++++++CENTER++++++++++++++++++++*/
 .centerContainer {
   border-radius: 8px;
   width: 650px;
   min-height: 500px;
-  background-color: blue;
 }
-
+.centerBtnsContainer {
+  font-size: 18px;
+  display: flex;
+}
+.btnRelevantCenter {
+  font-weight: bold;
+}
+.btnRelevantCenter:hover {
+  background-color: rgba(255, 255, 255, 0.519);
+  border-radius: 8px;
+}
+.btnLatestCenter:hover {
+  color: blue;
+}
+.btnTopCenter:hover {
+  color: blue;
+}
+.btnLatestCenter,
+.btnTopCenter {
+  color: rgb(92, 92, 92);
+}
+.btnRelevantCenter,
+.btnLatestCenter,
+.btnTopCenter {
+  padding: 0px 12px;
+}
+.welcomeDevCommunityCenter {
+  padding: 0px 12px;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 14px;
+}
+.welcomeDevCommunityImgCenter {
+  border-radius: 8px;
+}
+.p0_5WelcomeCenter {
+  text-align: left;
+  color: rgb(88, 88, 88);
+  font-size: 13px;
+  padding: 20px 0px;
+}
+.textWelcomeCenter p {
+  text-align: left;
+}
+.p1_5WelcomeCenter {
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  line-height: 1.25;
+}
+.p3_5WelcomeCenter {
+  padding: 20px 0px 10px 0px;
+  font-size: 16.5px;
+  line-height: 1.4;
+}
+.p3_5WelcomeCenter span {
+  font-weight: bold;
+}
+.p4_5WelcomeCenter {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 27px;
+  text-decoration: underline;
+  color: blue;
+}
+.p5_5WelcomeCenter {
+  padding: 9px 0px;
+}
 /*++++++++++++++++++++RIGHT++++++++++++++++++++*/
 .rightSideContainer {
   padding-top: 0px;
@@ -259,7 +327,6 @@ body {
   font-weight: bold;
   font-size: 20px;
 }
-
 .discussDescription {
   font-size: 12px;
   color: rgb(75, 74, 74);
@@ -314,18 +381,21 @@ body {
   font-size: 14px;
   padding: 10px 0px 0px 15px;
 }
-
 .queriedPosts p:hover {
   background-color: white;
   cursor: pointer;
 }
-/*++++++++++++++++++++SIGNUP and % of signin++++++++++++++++++++*/
+
+/*++++++++++++++++++++SIGNUP++++++++++++++++++++*/
+.signUpPageContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  background-color: white;
+}
 .mySignUpContainerFull {
   display: flex;
   justify-content: center;
-  min-width: 100vh;
-  min-height: 100vh;
-  background-color: white;
   text-align: center;
 }
 .imageContainer {
@@ -350,7 +420,8 @@ body {
   font-weight: 500;
   padding: 12px;
   margin-right: 12px;
-  width: 550px;
+  min-width: 425px;
+  max-width: 550px;
   display: grid;
   grid-template-columns: 1fr 25fr;
 }
@@ -370,62 +441,218 @@ body {
   margin-top: 20px;
 }
 
-/*SignIn*/
-.emailInputContainer input {
-  width: 550px;
+/*+++++++++++++++SIGNIN+++++++++++++++*/
+.signInPageContainer {
+  background-color: white;
+  height: 98vh;
+}
+.signInContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signInImage {
+  padding: 15px 0px;
+}
+.joinDEVSignIn {
+  font-weight: bold;
+  font-size: 24px;
+}
+.joinDEVSignInP {
+  color: rgb(66, 66, 66);
+  text-align: center;
+  padding: 0px 50px;
+  margin-bottom: 30px;
+}
+.btnsSignInContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.btnsSignInContainer button {
+  display: grid;
+  grid-template-columns: 1fr 25fr;
   border: solid gray 1px;
+  margin: 0px 10px;
   border-radius: 8px;
-  margin-right: 12px;
-  padding: 8px;
-  margin-bottom: 12px;
-}
-.emailInputContainer input:focus {
-  outline: solid blue 1px;
-}
-.emailInputContainer p {
-  text-align: left;
-  margin-left: 25px;
+  padding: 13.5px 7px;
   font-weight: 500;
-  padding-bottom: 10px;
+  font-size: 14px;
 }
-.passwordInputContainer input {
-  width: 550px;
-  border: solid gray 1px;
-  border-radius: 8px;
-  margin-right: 12px;
-  padding: 8px;
-  margin-bottom: 12px;
+.btnsSignInContainer button:hover {
+  background-color: rgba(128, 128, 128, 0.112);
 }
-.passwordInputContainer input:focus {
-  outline: solid blue 1px;
+.signInOr {
+  margin: 22px 0px;
+  font-size: 14px;
 }
+.signInSection {
+  margin: 0px 10px;
+}
+.signInContainerInputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.emailInputContainer p,
 .passwordInputContainer p {
-  text-align: left;
-  margin-left: 25px;
   font-weight: 500;
-  padding-bottom: 10px;
+}
+.emailInputContainer input,
+.passwordInputContainer input {
+  border: solid rgba(128, 128, 128, 0.418) 2px;
+  border-radius: 5px;
+  margin: 7px 0px 12px 0px;
+  padding: 7px;
+  width: 525px;
+}
+.emailInputContainer input:hover,
+.passwordInputContainer input:hover {
+  border: solid rgba(68, 68, 68, 0.407) 2px;
+}
+.emailInputContainer input:focus,
+.passwordInputContainer input:focus {
+  border: solid rgb(49, 49, 252) 3px;
+}
+.signInbottomContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .rememberForgotContainer {
   display: flex;
-  justify-content: space-between;
-  width: 550px;
-  margin-left: 25px;
-  margin-bottom: 25px;
+  gap: 278px;
 }
 .forgotPassword {
-  color: blue;
+  color: rgb(0, 0, 175);
+  cursor: pointer;
 }
 .btnSubmitLogIn {
-  background-color: rgb(88, 77, 247);
-  width: 550px;
+  border: none;
+  background-color: rgb(60, 60, 209);
   color: white;
-  padding: 12px;
   font-weight: 500;
-  border-radius: 8px;
-  margin-right: 5px;
-  margin-bottom: 25px;
+  border-radius: 5px;
+  margin: 20px 0px 12px 0px;
+  padding: 12px;
+  width: 520px;
+}
+.termsAndConductSignIn {
+  margin: 15px 0px 24px 0px;
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
+  text-align: center;
+}
+.alreadyAccountSignIn {
+  text-align: center;
+  margin-top: 20px;
+}
+.blueLinksSignIn {
+  color: rgba(29, 29, 235, 0.706);
 }
 
+/*+++++++++++++++CREATE ACCOUNT+++++++++++++++*/
+.pageCenterCA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backgroundCA {
+  background-color: whitesmoke;
+  height: 95vh;
+  display: grid;
+}
+.flexContainerCA {
+  display: flex;
+  flex-direction: column;
+  border: solid rgba(128, 128, 128, 0.469) 1px;
+  margin: 45px 1px;
+  border-radius: 8px;
+  padding: 30px;
+}
+.fileContainerCA {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: solid rgba(128, 128, 128, 0.469) 1px;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.flexContainerCA h1 {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+.flexContainerCA p {
+  font-weight: 500;
+  padding-bottom: 6px;
+}
+.btnSelectFileCA {
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: rgb(149, 149, 149);
+}
+.btnSelectFileCA:hover {
+  background-color: rgb(190, 189, 189);
+}
+
+.flexContainerCA input {
+  padding: 10px;
+  border: solid gray 1px;
+  border-radius: 8px;
+  width: 520px;
+}
+.flexContainerCA input:hover {
+  border: solid rgb(200, 200, 200) 1px;
+}
+.flexContainerCA input:focus {
+  border: solid blue 3px;
+}
+.btnSignUpCA {
+  margin-top: 50px;
+  width: 90px;
+  background-color: rgb(62, 62, 225);
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+}
+.btnSignUpCA:hover {
+  background-color: rgb(77, 77, 221);
+}
+
+@media (max-width: 769px) {
+  .searchBarContainer {
+    display: none;
+  }
+  .btnLogIn {
+    display: none;
+  }
+  .leftSideContainer {
+    display: none;
+  }
+  .centerContainer {
+    margin-right: 5px;
+  }
+  .emailInputContainer input,
+  .passwordInputContainer input {
+    width: 484px;
+  }
+  .btnSubmitLogIn {
+    width: 480px;
+  }
+  .rememberForgotContainer {
+    gap: 232px;
+  }
+  .flexContainerCA input {
+    width: 438px;
+  }
+}
 @media (min-width: 768px) {
   .btnSearch {
     display: none;
@@ -434,11 +661,9 @@ body {
     display: none;
   }
 }
-@media (max-width: 769px) {
-  .searchBarContainer {
-    display: none;
-  }
-  .btnLogIn {
+
+@media (max-width: 1024px) {
+  .rightSideContainer {
     display: none;
   }
 }

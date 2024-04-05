@@ -134,7 +134,37 @@ export default function Home() {
             </div>
           </aside>
           <center className="centerContainer">
-            <div className="centerBtnsContainer"></div>
+            <div className="centerBtnsContainer">
+              <button className="btnRelevantCenter">Relevant</button>
+              <button className="btnLatestCenter">Latest</button>
+              <button className="btnTopCenter">Top</button>
+            </div>
+            <div className="welcomeDevCommunityCenter">
+              <p className="p0_5WelcomeCenter">DEV Community</p>
+              <Image
+                className="welcomeDevCommunityImgCenter"
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s---UXjdvws--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wixrm7ejmrua4su7agha.jpg"
+                alt="Welcome Image DEV"
+                width={735}
+                height={376}
+              ></Image>
+              <div className="textWelcomeCenter">
+                <p className="p1_5WelcomeCenter">
+                  Need to stay up-to-date with the most relevant trends in
+                  software, such as generate AI, cloud computing, and all things
+                  frontend?
+                </p>
+                <p className="p2_5WelcomeCenter">Look no further.</p>
+                <p className="p3_5WelcomeCenter">
+                  You can do so much more once you
+                  <span> create your account. </span>
+                  Follow the devs and topics you care about, and keep
+                  up-to-date.
+                </p>
+                <p className="p4_5WelcomeCenter">Join the community</p>
+                <p className="p5_5WelcomeCenter">Happy coding ❤️</p>
+              </div>
+            </div>
           </center>
           <aside className="rightSideContainer">
             <div className="rigthDiscutionsContainer">
