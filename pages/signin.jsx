@@ -1,9 +1,33 @@
 import { identifyWithSignIn } from "@/src/constants/identifyWithSignIn";
+import { useState } from "react";
 import Buttons from "@/src/components/Buttons";
 import Image from "next/image";
 import Link from "next/link";
+import e from "express";
 
 export default function SignIn() {
+  const [email, setEmail] = useState(" ");
+  const [password, setPassword] = useState("");
+
+  function handleSubmit() {
+    e.preventDefault();
+    fetch("", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      doby: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+      })
+      .catch((error) => {
+        console.error("Login error: ", error);
+      });
+  }
+
   return (
     <section className="signInPageContainer">
       <div className="mySignInContainerFull">
@@ -36,16 +60,23 @@ export default function SignIn() {
           </div>
           <p className="signInOr">OR</p>
         </div>
-
-        <div className="signInSection">
+        <form className="signInSection" onSubmit={handleSubmit}>
           <div className="signInContainerInputs">
             <div className="emailInputContainer">
               <p>Email</p>
-              <input type="text"></input>
+              <input
+                type="text"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              ></input>
             </div>
             <div className="passwordInputContainer">
               <p>Password</p>
-              <input type="password"></input>
+              <input
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+              ></input>
             </div>
           </div>
           <div className="signInbottomContainer">
@@ -80,7 +111,7 @@ export default function SignIn() {
               </Link>
             </p>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   );

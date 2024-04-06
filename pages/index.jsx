@@ -9,55 +9,12 @@ import { rightDiscuss } from "@/src/constants/rightDiscuss";
 import { rightWatercooler } from "@/src/constants/rightWatercooler";
 import { rightTrending } from "@/src/constants/rightTrending";
 import { rightRecentrlyQueried } from "@/src/constants/rightRecentrlyQueried";
+import NavBar from "@/src/components/PageNavBar";
 
 export default function Home() {
   return (
     <main>
-      <nav className="myNavBar">
-        <div className="leftAndRight">
-          <div className="leftNavBar">
-            <div>
-              <button className="btnThreeBars">&#8801;</button>
-            </div>
-            <div>
-              <Image
-                className="logoDEV"
-                src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
-                alt="Logo DEV"
-                width={50}
-                height={40}
-              />
-            </div>
-            <div className="searchBarContainer">
-              <div className="btnSearchInput">
-                <input
-                  className="inputSearch"
-                  type="search"
-                  placeholder="Search..."
-                />
-              </div>
-              <div>
-                <button className="btnSearchInput">&#128269;</button>
-              </div>
-            </div>
-          </div>
-          <div className="rightNavBar">
-            <div>
-              <button className="btnSearch">&#128269;</button>
-            </div>
-            <div>
-              <Link href="/signup">
-                <button className="btnLogIn">Log in</button>
-              </Link>
-            </div>
-            <div>
-              <Link href="/signin">
-                <button className="btnCreateAccount">Create account</button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <NavBar />
       <div className="mainflexCenterContainer">
         <div className="mainFlexContainer">
           <aside className="leftSideContainer">
@@ -142,6 +99,7 @@ export default function Home() {
             <div className="welcomeDevCommunityCenter">
               <p className="p0_5WelcomeCenter">DEV Community</p>
               <Image
+                priority={true}
                 className="welcomeDevCommunityImgCenter"
                 src="https://res.cloudinary.com/practicaldev/image/fetch/s---UXjdvws--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wixrm7ejmrua4su7agha.jpg"
                 alt="Welcome Image DEV"

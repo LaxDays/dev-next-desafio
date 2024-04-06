@@ -272,6 +272,7 @@ body {
 }
 .welcomeDevCommunityImgCenter {
   border-radius: 8px;
+  width: auto;
 }
 .p0_5WelcomeCenter {
   text-align: left;
@@ -628,6 +629,42 @@ body {
   background-color: rgb(77, 77, 221);
 }
 
+/*+++++++++++++++ ACCOUNT CONFIRMATION +++++++++++++++*/
+.backgroundColorConfirmationAccount {
+  height: 100vh;
+  background-color: white;
+}
+.accountConfirmationContainer {
+  padding-top: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.confirmationIcon {
+  font-size: 40px;
+}
+.accountConfirmationContainer h1 {
+  font-weight: bolder;
+  font-size: 25px;
+}
+.ConfirmationText {
+  font-size: 18px;
+}
+.createAnotherAccount {
+  background-color: rgba(128, 128, 128, 0.299);
+  margin-top: 330px;
+  border-radius: 8px;
+}
+.createAnotherAccount p {
+  padding: 20px;
+}
+.blueTextConfirmation {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
 @media (max-width: 769px) {
   .searchBarContainer {
     display: none;
@@ -661,6 +698,9 @@ body {
   }
   .btnThreeBars {
     display: none;
+  }
+  .accountConfirmationContainer h1 {
+    font-size: 30px;
   }
 }
 
