@@ -45,6 +45,11 @@ export default function NavBar() {
               <button className="btnCreateAccount">Create account</button>
             </Link>
           </div>
+          <div>
+            <Link href="/post">
+              <button className="btnCreateAccount">Create Post</button>
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

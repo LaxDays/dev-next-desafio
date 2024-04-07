@@ -3,18 +3,22 @@ import { useState } from "react";
 import Buttons from "@/src/components/Buttons";
 import Image from "next/image";
 import Link from "next/link";
-import e from "express";
+import { useRouter } from "next/router";
 
 export default function SignIn() {
   const [email, setEmail] = useState(" ");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const router = useRouter();
 
-  function handleSubmit() {
+  function handleSubmit(e) {
     e.preventDefault();
-    fetch("", {
+    fetch("http://localhost:3001/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      doby: JSON.stringify({
+      body: JSON.stringify({
+        name: "",
+        username: "",
         email: email,
         password: password,
       }),
@@ -22,6 +26,16 @@ export default function SignIn() {
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
+        console.log(json.token);
+        if (json.token) {
+          localStorage.setItem("token", json.token);
+          setUser("");
+          setPassword("");
+          router.push("/");
+          return;
+        }
+        setError("¡Usuario o contraseña incorrectos!");
+        setPassword("");
       })
       .catch((error) => {
         console.error("Login error: ", error);
@@ -65,17 +79,21 @@ export default function SignIn() {
             <div className="emailInputContainer">
               <p>Email</p>
               <input
-                type="text"
+                type="email"
+                name="email"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
+                required
               ></input>
             </div>
             <div className="passwordInputContainer">
               <p>Password</p>
               <input
                 type="password"
+                name="password"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
+                required
               ></input>
             </div>
           </div>
@@ -89,7 +107,7 @@ export default function SignIn() {
                 <p>Forgot password?</p>
               </div>
             </div>
-
+            <div>{error && <p className="errorUoC">{error}</p>}</div>
             <div>
               <button className="btnSubmitLogIn">Log in</button>
             </div>
