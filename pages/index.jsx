@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Buttons from "@/src/components/Buttons";
 import BasicCard from "@/src/components/postsBasicCard";
@@ -10,11 +9,13 @@ import { rightWatercooler } from "@/src/constants/rightWatercooler";
 import { rightTrending } from "@/src/constants/rightTrending";
 import { rightRecentrlyQueried } from "@/src/constants/rightRecentrlyQueried";
 import NavBar from "@/src/components/PageNavBar";
+import Center from "@/src/components/PageCenter";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <main>
       <NavBar />
+
       <div className="mainflexCenterContainer">
         <div className="mainFlexContainer">
           <aside className="leftSideContainer">
@@ -90,43 +91,9 @@ export default function Home() {
               </p>
             </div>
           </aside>
-          <center className="centerContainer">
-            <div className="centerBtnsContainer">
-              <button className="btnRelevantCenter">Relevant</button>
-              <button className="btnLatestCenter">Latest</button>
-              <button className="btnTopCenter">Top</button>
-            </div>
-            <div className="welcomeDevCommunityCenter">
-              <p className="p0_5WelcomeCenter">DEV Community</p>
-              <Image
-                priority={true}
-                className="welcomeDevCommunityImgCenter"
-                src="https://res.cloudinary.com/practicaldev/image/fetch/s---UXjdvws--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wixrm7ejmrua4su7agha.jpg"
-                alt="Welcome Image DEV"
-                width={735}
-                height={376}
-              ></Image>
-              <div className="textWelcomeCenter">
-                <p className="p1_5WelcomeCenter">
-                  Need to stay up-to-date with the most relevant trends in
-                  software, such as generate AI, cloud computing, and all things
-                  frontend?
-                </p>
-                <p className="p2_5WelcomeCenter">Look no further.</p>
-                <p className="p3_5WelcomeCenter">
-                  You can do so much more once you
-                  <span> create your account. </span>
-                  Follow the devs and topics you care about, and keep
-                  up-to-date.
-                </p>
-                <Link href="/signup">
-                  <p className="p4_5WelcomeCenter">Join the community</p>
-                </Link>
-                <p className="p5_5WelcomeCenter">Happy coding ❤️</p>
-              </div>
-            </div>
-            <div className="postContainerCenter"></div>
-          </center>
+
+          <Center />
+
           <aside className="rightSideContainer">
             <div className="rigthDiscutionsContainer">
               <p className="discussTitle">#discuss</p>

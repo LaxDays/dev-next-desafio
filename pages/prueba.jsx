@@ -2,7 +2,7 @@ export default function UserPost(props) {
   return (
     <main>
       <section>
-        {props.posts.map((userPost, index) => {
+        {props?.posts?.map((userPost, index) => {
           return (
             <article key={`userPost-${userPost.title}`}>
               <div className="postUserContainerCenter">
