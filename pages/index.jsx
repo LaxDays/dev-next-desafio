@@ -119,10 +119,13 @@ export default function Home() {
                   Follow the devs and topics you care about, and keep
                   up-to-date.
                 </p>
-                <p className="p4_5WelcomeCenter">Join the community</p>
+                <Link href="/signup">
+                  <p className="p4_5WelcomeCenter">Join the community</p>
+                </Link>
                 <p className="p5_5WelcomeCenter">Happy coding ❤️</p>
               </div>
             </div>
+            <div className="postContainerCenter"></div>
           </center>
           <aside className="rightSideContainer">
             <div className="rigthDiscutionsContainer">

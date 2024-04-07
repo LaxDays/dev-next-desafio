@@ -1,7 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Post() {
+  const [createPost, setCreatePost] = useState({
+    title: "",
+    post: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCreatePost((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(createPost);
+    fetch("http://localhost:3001/post", {
+      method: "Post",
+      body: JSON.stringify(createPost),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+      });
+  };
+
   return (
     <div className="flexContainerCenter">
       <div className="postContainer">
@@ -24,13 +53,15 @@ export default function Post() {
             <button className="btnCancelPost">X</button>
           </div>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="postTitleContainer">
             <button className="btnAddCoverImage">Add a cover image</button>
             <input
               className="inputNewPostTitle"
               type="text"
               placeholder="New post title here..."
+              name="title"
+              onChange={handleChange}
             ></input>
             <input
               className="inputAddTags"
@@ -61,6 +92,8 @@ export default function Post() {
               className="textAreaPost"
               rows="22"
               placeholder="Write your post content here..."
+              name="post"
+              onChange={handleChange}
             ></textarea>
           </div>
           <div className="btnsBottomPost">

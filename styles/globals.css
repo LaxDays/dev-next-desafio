@@ -11,7 +11,7 @@ body {
   background-color: rgb(247, 240, 240);
 }
 
-/*++++++++++++++++++++NAV BAR++++++++++++++++++++*/
+/*++++++++++++++++++++ myNAV BAR ++++++++++++++++++++*/
 .myNavBar {
   background-color: white;
 }
@@ -120,7 +120,7 @@ body {
   margin-left: 5px;
 }
 
-/*++++++++++++++++++++LEFT SIDE++++++++++++++++++++*/
+/*++++++++++++++++++++ myLEFT SIDE ++++++++++++++++++++*/
 .leftSideContainer {
   border-radius: 8px;
   width: 240px;
@@ -232,7 +232,7 @@ body {
   font-weight: 500;
 }
 
-/*++++++++++++++++++++CENTER++++++++++++++++++++*/
+/*++++++++++++++++++++ myCENTER ++++++++++++++++++++*/
 .centerContainer {
   border-radius: 8px;
   width: 650px;
@@ -309,7 +309,119 @@ body {
 .p5_5WelcomeCenter {
   padding: 9px 0px;
 }
-/*++++++++++++++++++++RIGHT++++++++++++++++++++*/
+
+/* myPOST */
+.postUserContainerCenter {
+  border: solid rgba(128, 128, 128, 0.185) 1px;
+  margin: 10px 0px;
+  border-radius: 8px;
+  background-color: white;
+}
+.postTopSectionCenter {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.postUserPhotoCenter {
+  font-size: 23px;
+  margin: 6px;
+  border: solid black 1px;
+  border-radius: 50%;
+}
+.postUserPhotoCenter:hover {
+  cursor: pointer;
+}
+.postUserNameCenter {
+  color: rgb(75, 75, 75);
+  font-weight: 500;
+  font-size: 14px;
+}
+.postUserNameCenter:hover {
+  cursor: pointer;
+}
+.postDateCenter {
+  color: rgb(75, 75, 75);
+  font-size: 12px;
+  text-align: left;
+}
+.postDateCenter:hover {
+  cursor: pointer;
+}
+.postTitleCenter {
+  font-weight: bold;
+  text-align: left;
+  margin: 0px 16px;
+  font-size: 20px;
+}
+.postTitleCenter:hover {
+  color: rgb(1, 1, 143);
+  cursor: pointer;
+}
+.postTagsContainerCenter {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 00px 16px;
+}
+.postTagsCenter {
+  font-size: 13px;
+  border-radius: 5px;
+  max-width: fit-content;
+  padding: 6px;
+}
+.postTagsCenter:hover {
+  cursor: pointer;
+  background-color: rgba(163, 163, 163, 0.277);
+}
+.postBottomSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 16px 10px 16px;
+}
+.postBottomSectionLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.postReactionsCenter {
+  color: gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+.postReactionsCenter:hover {
+  background-color: rgba(128, 128, 128, 0.14);
+}
+.postCommentsCenter {
+  color: gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+.postCommentsCenter:hover {
+  background-color: rgba(128, 128, 128, 0.14);
+}
+
+.postBottomSectionRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.postReadingTime {
+  font-size: 12px;
+  color: rgb(128, 128, 128) y;
+}
+.postSaveOption {
+  padding: 10px;
+  border-radius: 5px;
+}
+.postSaveOption:hover {
+  background-color: rgba(0, 0, 255, 0.105);
+}
+.postBottomTextReactionComments {
+  font-size: 13px;
+  color: rgb(50, 50, 50);
+}
+/*++++++++++++++++++++ myRIGHT ++++++++++++++++++++*/
 .rightSideContainer {
   padding-top: 0px;
   margin-top: 0px;
@@ -877,6 +989,9 @@ body {
   .btnOptionHideSmall {
     display: none;
   }
+  .postBottomTextReactionComments {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .btnSearch {
@@ -890,6 +1005,10 @@ body {
   }
   .btnBigDisplayPostBottom {
     display: none;
+  }
+  .postTitleCenter {
+    font-size: 23px;
+    margin: 0px 55px;
   }
 }
 
