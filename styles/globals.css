@@ -951,6 +951,115 @@ body {
 .postBottonOptions {
   font-size: 20px;
 }
+
+/*+++++++++++++++ myIDPOST ++++++++++++++*/
+
+.postIDUser {
+  max-width: 1300px;
+  background-color: white;
+  border-radius: 8px;
+}
+.postIDNameOfUser {
+  font-size: 15px;
+}
+.postIDTitle {
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 0px 15px;
+}
+.postIDPostofUser {
+  padding: 20px;
+  font-size: 18px;
+}
+/* ID Bottom Post */
+.postIDBottomSection {
+  padding-top: 20px;
+  border-top: solid rgba(128, 128, 128, 0.213) 1px;
+}
+.postIDTopSuscribeContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px 10px 10px;
+}
+.postIDTopComments {
+  font-weight: bolder;
+  font-size: 21px;
+}
+.postIDbtnSuscribe {
+  border: solid rgb(169, 169, 169) 1px;
+  padding: 7px 15px;
+  border-radius: 8px;
+}
+.postIDbtnSuscribe:hover {
+  border: solid rgb(81, 81, 81) 1.5px;
+}
+.postIDCommentContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0px 10px;
+  gap: 10px;
+}
+.logoDEVID {
+  border-radius: 60%;
+}
+.postIDTextArea {
+  border: solid gray 1px;
+  border-radius: 5px;
+  flex: 1;
+  padding: 10px;
+}
+.postIDCodeReport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(128, 128, 128, 0.917);
+  font-size: 14px;
+  padding: 30px 0px 10px 0px;
+  gap: 10px;
+}
+.postIDCode:hover {
+  cursor: pointer;
+}
+.postIDReport:hover {
+  cursor: pointer;
+}
+/* myFooter */
+.postFooterContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-top: solid rgba(128, 128, 128, 0.264) 1px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.postFooterEmoticons,
+.postFooterComments,
+.postFooterSave {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0px;
+  color: rgb(156, 156, 156);
+  font-size: 15px;
+}
+
+.postFooterIcon {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+.postFooterThreePointsOptions {
+  font-size: 30px;
+  padding: 0px 10px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+.postFooterThreePointsOptions:hover {
+  background-color: rgba(128, 128, 128, 0.132);
+}
+
 @media (max-width: 769px) {
   .searchBarContainer {
     display: none;
@@ -1009,6 +1118,37 @@ body {
   .postTitleCenter {
     font-size: 23px;
     margin: 0px 55px;
+  }
+
+  .postFooterContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 56px;
+    padding-top: 44px;
+    top: 0;
+    width: 75px;
+    border-right: solid rgba(128, 128, 128, 0.381) 1px;
+    background-color: whitesmoke;
+  }
+
+  .postFooterEmoticons,
+  .postFooterComments,
+  .postFooterSave {
+    flex-direction: column;
+    color: rgb(108, 108, 108);
+  }
+  .postIDUser {
+    margin-left: 75px;
+    position: relative;
+    top: 0px;
+    border-radius: 0%;
+    padding: 10px 30px 10px 30px;
+  }
+  .postIDTopComments {
+    font-size: 25px;
+  }
+  .postIDTitle {
+    font-size: 38px;
   }
 }
 

@@ -8,7 +8,7 @@ export default function Center() {
   useEffect(() => {
     fetch("http://localhost:3001/post")
       .then((res) => res.json())
-      .then((data) => setUserPost(data.data));
+      .then((info) => setUserPost(info.data));
   }, []);
   return (
     <center className="centerContainer">
@@ -57,7 +57,9 @@ export default function Center() {
                   </div>
                 </div>
                 <div className="postTitleCenter">
-                  <p>{post.title}</p>
+                  <Link href={`post/${post._id}`}>
+                    <p>{post.title}</p>
+                  </Link>
                 </div>
                 <div className="postTagsContainerCenter">
                   <div className="postTagsCenter">#begginers</div>

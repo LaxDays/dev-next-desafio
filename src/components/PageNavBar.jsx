@@ -10,13 +10,15 @@ export default function NavBar() {
             <button className="btnThreeBars">&#8801;</button>
           </div>
           <div>
-            <Image
-              className="logoDEV"
-              src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
-              alt="Logo DEV"
-              width={50}
-              height={40}
-            />
+            <Link href="/">
+              <Image
+                className="logoDEV"
+                src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+                alt="Logo DEV"
+                width={50}
+                height={40}
+              />
+            </Link>
           </div>
           <div className="searchBarContainer">
             <div className="btnSearchInput">
