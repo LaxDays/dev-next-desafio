@@ -10,7 +10,7 @@ export default function AccountConfirmation() {
           <Link href="/signin">
             <span className="blueTextConfirmation">Click here </span>
           </Link>
-          to Log In and start creating amazing posts!.
+          to Log In and start creating amazing posts!
         </p>
         <div className="createAnotherAccount">
           <p>

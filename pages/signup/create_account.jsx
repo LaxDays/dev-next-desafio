@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function CreateAccount() {
+  const router = useRouter();
   const [createAccountText, setCreateAccountText] = useState({
     name: "",
     username: "",
@@ -27,6 +29,8 @@ export default function CreateAccount() {
     })
       .then((response) => response.json())
       .then((json) => console.log(json));
+
+    router.push("/signup/account_confirmation");
   };
   return (
     <div className="pageCenterCA">
@@ -39,15 +43,20 @@ export default function CreateAccount() {
             <span>No file selected</span>
           </div>
           <p>Name</p>
-          <input name="name" type="text" onChange={handleChange} />
+          <input name="name" type="text" onChange={handleChange} required />
           <p>Username</p>
-          <input name="username" type="text" onChange={handleChange} />
+          <input name="username" type="text" onChange={handleChange} required />
           <p>Email</p>
-          <input name="email" type="email" onChange={handleChange} />
+          <input name="email" type="email" onChange={handleChange} required />
           <p>Password</p>
-          <input name="password" type="password" onChange={handleChange} />
+          <input
+            name="password"
+            type="password"
+            onChange={handleChange}
+            required
+          />
           <p>Password Confirmation</p>
-          <input type="password" />
+          <input type="password" required />
           <button type="submit" className="btnSignUpCA">
             Sign up
           </button>

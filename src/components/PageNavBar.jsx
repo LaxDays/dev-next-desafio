@@ -38,12 +38,12 @@ export default function NavBar() {
             <button className="btnSearch">&#128269;</button>
           </div>
           <div>
-            <Link href="/signup">
+            <Link href="/signin">
               <button className="btnLogIn">Log in</button>
             </Link>
           </div>
           <div>
-            <Link href="/signin">
+            <Link href="/signup">
               <button className="btnCreateAccount">Create account</button>
             </Link>
           </div>
