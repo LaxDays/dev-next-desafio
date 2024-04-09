@@ -26,16 +26,15 @@ export default function SignIn() {
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
-        console.log(json.token);
-        if (json.token) {
-          localStorage.setItem("token", json.token);
-          setUser("");
+        console.log(json.data);
+        if (json.data) {
+          localStorage.setItem("token", json.data);
+          setEmail("");
           setPassword("");
           router.push("/");
           return;
         }
         setError("¡Usuario o contraseña incorrectos!");
-        setPassword("");
       })
       .catch((error) => {
         console.error("Login error: ", error);
