@@ -1,6 +1,6 @@
 export default function UserPost(props) {
   return (
-    <main>
+    <main className="fondoPagina">
       <section>
         {props?.posts?.map((userPost, index) => {
           return (

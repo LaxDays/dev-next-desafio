@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Post() {
+  const router = useRouter();
   const [createPost, setCreatePost] = useState({
     title: "",
     post: "",
@@ -29,6 +31,7 @@ export default function Post() {
       .then((json) => {
         console.log(json);
       });
+    router.push("/");
   };
 
   return (

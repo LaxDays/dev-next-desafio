@@ -12,7 +12,7 @@ export default function PostID() {
     fetch(`http://localhost:3001/post/${router.query.id}`)
       .then((res) => res.json())
       .then((info) => setUserPost(info.data));
-  }, []);
+  }, [router]);
 
   return (
     <main>
